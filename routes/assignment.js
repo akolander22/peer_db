@@ -17,12 +17,14 @@ router.post('/createData', function(request, response){
   console.log('Yay, new data');
   var data = request.body;
 
-  var createdAssignment = new Assignment ({
-      assignment_number: 1,
-      student_name: "Andrew",
-      score: 5,
+  var createdAssignment = new Assignments ({
+      assignment_number: data.assignment_number,
+      student_name: data.student_name,
+      score: data.score,
       date_completed: new Date ()
       })
+
+      console.log(data.score);
 
   createdAssignment.save(function(err){
     if(err){

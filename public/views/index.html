@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Peer DB</title>
-    <script src="vendors/angular.angular.min.js" charset="utf-8"></script>
+    <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js"></script>
   </head>
   <body ng-controller="AssignmentController as assignBot">
     <h1>Peer DB</h1>
@@ -12,6 +13,15 @@
     <input type="number" ng-model="assignBot.score" />
     <button ng-click="assignBot.submitAssignments()">Submit Assignments</button>
 
-    
+    <ul>
+      <li ng-repeat="item in assignBot.assignmentList" >
+        Assignment:{{item.assignment_number}}
+        student: {{item.student_name}}
+        Score: {{item.score}}
+
+      </li>
+    </ul>
+
+
   </body>
 </html>
