@@ -18,7 +18,7 @@ router.post('/createData', function(request, response){
   var data = request.body;
 
   var createdAssignment = new Assignment ({
-      assignment_number: 1
+      assignment_number: 1,
       student_name: "Andrew",
       score: 5,
       date_completed: new Date ()
@@ -33,3 +33,5 @@ router.post('/createData', function(request, response){
     }
   })
 })
+
+module.exports = router;
