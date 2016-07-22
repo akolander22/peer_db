@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="assignmentApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Peer DB</title>
+    <script src="vendors/angular.angular.min.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="AssignmentController as assignBot">
+    <h1>Peer DB</h1>
+    <input type="number" ng-model="assignBot.assignment_number" />
+    <input type="text" ng-model="assignBot.student_name" />
+    <input type="number" ng-model="assignBot.score" />
+    <button ng-click="assignBot.submitAssignments()">Submit Assignments</button>
+
+    
+  </body>
+</html>
